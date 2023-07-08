@@ -1,5 +1,8 @@
 /**
- *  Try This -p 
+ *  Try This -p. 44
+ *  2) switch문을 사용해서 오늘 날짜를 출력하시오.
+ *      - 오늘은 000요일입니다.
+ *      - switch문을 사용하지 않고도 작성해 보시오.
  */
 
 const getWeekName = (date) => {
