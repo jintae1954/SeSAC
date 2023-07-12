@@ -27,3 +27,15 @@ Math.sqrt() 사용
 파일명: execution_context.js
 
 **예시 코드의 실행 출력을 예상하고, 실행 컨텍스트를 그리시오.**
+
+### TryThis 04
+
+파일명: closure.js
+
+**closure를 활용하여 bill 함수를 완성하시오.**
+
+### TryThis 05
+
+파일명: closure_execution_context_img, closure_execution_context.js
+
+**예시 코드의 실행 컨텍스트를 그리시오.**
