@@ -5,43 +5,45 @@ const MENU = {
 };
 
 function bill() {
-  const orderedItems = [];
-  const billFormat = () => {
-    console.log("=".repeat(21));
+  const orders = [];
+
+  const printFormat = (len = 21) => {
+    console.log("=".repeat(len));
   };
+
   const makeRightString = (s, len = 9) => {
-    s = s.toLocaleString();
-    const t = ' '.repeat(len) + s + '원';
+    const t = ' '.repeat(len) + s.toLocaleString() + '원';
     return t.substring(t.length - len);
   };
-  const pritTaxes = (tax) => {
-    console.log("부가세액: ", makeRightString(tax));
-    console.log(" - ".repeat(7));
-  };
-  const printTotalPrices = (prices) => {
+
+  const printOrderAndPriceAndTax = (order, price, tax) => {
+    console.log(order);
+    console.log("공급가액: ", makeRightString(price));
+    console.log("부가세액: ", makeRightString(tax))
+  }
+
+  const printTotalPricesAndTaxes = (prices, taxes) => {
     console.log("주문합계: ", makeRightString(prices));
-  }; 
-  const printTotalTaxes = (taxes) => {
     console.log("세액합계: ", makeRightString(taxes));
-  }; 
+  };
+
   return {
     order(thing) {
-      orderedItems.push(thing);
+      orders.push(thing);
     },
     printBill() {
-      billFormat();
       let prices = 0, taxes = 0;
-      for (item of orderedItems) {
-        let price = MENU[item].price;
-        let tax = MENU[item].taxFree === 1 ? 0 : Math.round((MENU[item].price / 1.1) * 0.1);
-        console.log(item);
-        console.log("공급가액: ", makeRightString(price));
+      printFormat();
+      for (const order of orders) {
+        let price = MENU[order].price;
+        let tax = MENU[order].taxFree === 1 ? 0 : Math.round( (MENU[order].price/1.1) * 0.1);
+        printOrderAndPriceAndTax(order, price, tax)
+        console.log(" - ".repeat(7));
         prices += price;
-        MENU[item].taxFree === 1 ? pritTaxes(0) : pritTaxes(tax), taxes += tax;
+        taxes += tax;
       }
-      printTotalPrices();
-      printTotalTaxes();
-      billFormat();
+      printTotalPricesAndTaxes(prices, taxes);
+      printFormat();
     }
   };
 }
@@ -54,5 +56,5 @@ table1.printBill();
 table1.order('탕슉');
 table1.printBill();
 
-table1.order('짬뽕');
+table1.order('탕슉');
 table1.printBill();
