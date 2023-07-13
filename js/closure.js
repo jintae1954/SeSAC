@@ -6,27 +6,22 @@ const MENU = {
 
 function bill() {
   const orders = [];
-
   const printFormat = (len = 21) => {
     console.log("=".repeat(len));
   };
-
   const makeRightString = (s, len = 9) => {
     const t = ' '.repeat(len) + s.toLocaleString() + '원';
     return t.substring(t.length - len);
   };
-
   const printOrderAndPriceAndTax = (order, price, tax) => {
     console.log(order);
     console.log("공급가액: ", makeRightString(price));
-    console.log("부가세액: ", makeRightString(tax))
-  }
-
+    console.log("부가세액: ", makeRightString(tax));
+  };
   const printTotalPricesAndTaxes = (prices, taxes) => {
     console.log("주문합계: ", makeRightString(prices));
     console.log("세액합계: ", makeRightString(taxes));
   };
-
   return {
     order(thing) {
       orders.push(thing);
