@@ -39,3 +39,21 @@ Math.sqrt() 사용
 파일명: closure_execution_context_img, closure_execution_context.js
 
 **예시 코드의 실행 컨텍스트를 그리시오.**
+
+### TryThis 06
+
+파일명: deepCopy.js
+
+**원시값(primitive)만을 갖는 객체 kim을 복사하는 프로그램을 Object의 클래스 메소드 / ... 연산자를 사용하지 말고 작성하시오.**
+
+### TryThis 07
+
+파일명: once.js
+
+**함수를 한번만 실행하게 하는 once 함수를 작성하시오. const once = (fn) =>**
+
+### TryThis 08
+
+파일명: getNextWeek.js
+
+**getNextWeek 함수는 widx변수에 부수 효과(side effect)가 있다. 이를 부수 효과가 없도록 변경하시오. 힌트: closure, IIFE**
