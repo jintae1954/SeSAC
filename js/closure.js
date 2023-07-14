@@ -22,25 +22,30 @@ function bill() {
     console.log("주문합계: ", makeRightString(prices));
     console.log("세액합계: ", makeRightString(taxes));
   };
-  return {
-    order(thing) {
-      orders.push(thing);
-    },
-    printBill() {
-      let prices = 0, taxes = 0;
-      printFormat();
-      for (const order of orders) {
-        let price = MENU[order].price;
-        let tax = MENU[order].taxFree === 1 ? 0 : Math.round( (MENU[order].price/1.1) * 0.1);
-        printOrderAndPriceAndTax(order, price, tax)
-        console.log(" - ".repeat(7));
-        prices += price;
-        taxes += tax;
-      }
-      printTotalPricesAndTaxes(prices, taxes);
-      printFormat();
-    }
+
+  const order= (thing) => {
+    orders.push(thing);
   };
+
+  const printBill = () => {
+    let prices = 0, taxes = 0;
+    printFormat();
+    for (const order of orders) {
+      let price = MENU[order].price;
+      let tax = MENU[order].taxFree === 1 ? 0 : Math.round( (MENU[order].price/1.1) * 0.1);
+      printOrderAndPriceAndTax(order, price, tax)
+      console.log(" - ".repeat(7));
+      prices += price;
+      taxes += tax;
+    }
+    printTotalPricesAndTaxes(prices, taxes);
+    printFormat();
+  };
+
+  return {
+    order,
+    printBill,
+  }
 }
 
 const table1 = bill();
