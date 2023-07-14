@@ -44,7 +44,7 @@ Math.sqrt() 사용
 
 파일명: deepCopy.js
 
-**원시값(primitive)만을 갖는 객체 kim을 복사하는 프로그램을 Object의 클래스 메소드 / ... 연산자를 사용하지 말고 작성하시오.**
+**깊은 복사를 하는 deepCopy를 작성하시오.**
 
 ### TryThis 07
 
