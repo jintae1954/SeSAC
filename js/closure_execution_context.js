@@ -1,5 +1,6 @@
 function discount() {
   const dcRate = 0.1;
+  
   return function (price) {
     return price * dcRate;
   };
