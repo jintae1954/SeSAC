@@ -1,16 +1,22 @@
+/**
+ * Part 1.
+ * 
+ */
 const expressFn = function(name) {
   this.name = name;
   console.log(this, new.target, this.name, name);
-}
-
+};
 const arrowFn = (name) => {
   this.name = name;
   console.log(this, new.target, this.name, name);
-}
+};
 
 expressFn('expfn');
 arrowFn('afn');
 
+/**
+ * Part 2.
+ */
 console.log('-'.repeat(10));
 
 const Dog = function(name) {

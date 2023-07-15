@@ -1,9 +1,5 @@
 let runCnt = 0;
 
-function fibo() {
-  
-}
-
 // recursive
 function fibonacciRecursive(n) {
   runCnt += 1;
