@@ -1,15 +1,8 @@
 const once = (fn) => {
   let flag = false;
 
-  return (x,y) => { 
-    if(flag === false) {
-      flag = true;
-      return fn(x,y);
-    }
-
-    return;
-  }
-}
+  return (...args) => flag ? undefined : (flag = true, fn(...args));
+};
 
 const func = once( (x, y) => `금일 운행금지 차량은 끝번호 ${x}와 ${y}입니다.` );
 
