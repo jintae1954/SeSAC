@@ -20,4 +20,5 @@ console.log(unshift(myArray, 0)); // [0, 1, 2, 3, 4]
 console.log(unshift(myArray, 7, 8)); // [7, 8, 1, 2, 3, 4]
 console.log(shift(myArray)); // [2, 3, 4]
 console.log(shift(myArray, 2)); // [3, 4]
+
 console.log(myArray); // [1, 2, 3, 4]

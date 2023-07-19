@@ -1,23 +1,19 @@
 /**
  * Part 1. 다음과 같은 정수 배열을 생성하는 range 함수를 구현하시오.
  */
-const range = (...args) => {
-  console.log("args\n", args);
+const range = (start, end, stepSize) => {
+  let ret = [];
 
-  let start = args[0];
-  let end = args[1];
-  let step = args[2];
   
 
-  console.log("ret\n", ret);
   return ret;
 };
 
 
 range(1, 10, 1); // [1,2,3,4,5,7,8,9,10]
 range(1, 10, 2); // [1,3,5,7,9]
-range(1, 10); // [1,2,3,4,5,7,8,9,10]
-range(10, 1); // [10,9,8,7,6,5,4,3,2,1]
+// range(1, 10); // [1,2,3,4,5,7,8,9,10]
+// range(10, 1); // [10,9,8,7,6,5,4,3,2,1]
 // range(10, 1, -2); // [10,8,6,4,2]
 
 // [1,2,3,4,5]
