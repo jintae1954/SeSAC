@@ -1,3 +1,6 @@
+/**
+ * Part 1. push, pop, unshift, shift를 순수함수로 구현하시오.
+ */
 const myArray = [1,2,3,4];
 
 const push = (arr, ...appendValues) => {
