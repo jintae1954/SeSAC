@@ -4,9 +4,6 @@
 
 const arr = [1,2,3,4];
 
-// console.log(arr.slice(2)); // [3,4]
-// console.log(arr.slice(1,3)); // [2,3]
-
 const deleteArray = (arr, from, to = arr.length) => {
   let res = [];
 
