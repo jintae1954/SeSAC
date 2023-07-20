@@ -19,8 +19,8 @@ const deleteArray = (arr, from, to = arr.length) => {
   return res;
 };
 
-// console.log(deleteArray(arr, 2)); // [1, 2]
-// console.log(deleteArray(arr, 1, 3)); // [1, 4]
+console.log(deleteArray(arr, 2)); // [1, 2]
+console.log(deleteArray(arr, 1, 3)); // [1, 4]
 
 /**
  * Part 2. deleteObject 함수를 순수함수로 구현하시오.
