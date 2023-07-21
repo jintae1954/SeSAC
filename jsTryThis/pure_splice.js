@@ -5,23 +5,11 @@
 const arr = [1,2,3,4,5];
 
 const splice = (src, start, deleteCnt = src.length, ...newItem) => {
-  console.log(src.slice(start, start + deleteCnt));
-
-  let res = [];
-  for(let i = 0; i < src.length; i += 1) {
-    if(start <= i && i < start + deleteCnt)
-      continue;
-    res.push(src[i]);
-  }
-
-  let head = res.slice(0, start);
-  let tail = res.slice(start);
-  res = [...head, ...newItem, ...tail];
-
-  return res;
+  let head = src.slice(0, start);
+  let tail = src.slice(start+deleteCnt);
+  
+  return res = [...head, ...newItem, ...tail];
 }
-
-// arr = [1,2,3,4,5] -> [1,5] -> []
 
 const a1 = splice(arr, 1, 3); // a1 = [1, 5]
 console.log("🚀 ~ a1:", a1);
