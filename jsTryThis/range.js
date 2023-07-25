@@ -21,7 +21,7 @@ const range = (start, end, stepSize) => {
     }
   }
   stepSize = stepSize ?? ( end >= start ? 1 : -1 );
-  console.log("start end stepSize", start, end, stepSize);
+  // console.log("start end stepSize", start, end, stepSize);
   const ret = [start];
   for(let i = start + stepSize; ((end - start !== 0) && (end - start > 0 ? i <= end : i >= end)); i += stepSize) {
     ret.push(i);

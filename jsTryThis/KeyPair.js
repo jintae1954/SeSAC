@@ -11,7 +11,7 @@ const keyPair = (arr, N) => {
       }
     }
   }
-
+  
   return undefined;
 };
 

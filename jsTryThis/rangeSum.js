@@ -5,7 +5,7 @@
 //           0  1  2  3  4  5  6  7  8
 const arr = [1, 3, 4, 2, 5, 8, 6, 7, 9];
 
-const rangeSum = (here, there) => {
+const rangeSum = (here = 0, there = arr.length) => {
   if(here > there) {
     [there, here] = [here, there];
   }
@@ -14,7 +14,7 @@ const rangeSum = (here, there) => {
   const sum = temp.reduce((acc, cur) => acc + cur);
   console.log("🚀 ~ rangeSum ~ sum:", sum);
   
-  return sum
+  return sum;
 };
 
 rangeSum(2, 5); // 19 = 4 + 2 + 5 + 8
@@ -26,3 +26,7 @@ rangeSum(6, 8); // 22
 rangeSum(8, 6); // 22 // 추가 케이스
 rangeSum(2, 8); // 41
 rangeSum(4, 4); // 5
+
+rangeSum(5); // 30
+rangeSum(2); // 41
+rangeSum(); // 45
