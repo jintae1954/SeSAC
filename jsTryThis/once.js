@@ -1,3 +1,6 @@
+/**
+ * Part 1. 함수를 한번만 실행하게 하는 once함수를 작성하시오.
+ */
 const once = (fn) => {
   let flag = false;
 

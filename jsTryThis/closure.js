@@ -1,3 +1,6 @@
+/**
+ * Part 1. closure를 활용하여 bill함수를 완성하시오.
+ */
 const MENU = {
   짜장: { price: 7000 },
   짬뽕: { price: 9900 },

@@ -1,6 +1,7 @@
 /**
  * Part 1. 오늘은 000요일입니다. (switch문을 사용하지 않고도 작성해 보시오.)
  */
+
 const getWeekName = (date) => {
   let weekName;
   switch (date.getDay()) {
@@ -33,6 +34,7 @@ const getWeekName = (date) => {
   // const mm = makeLenString1(date.getMonth());
   // const dd = makeLenString2(date.getDate());
   // console.log(`${yyyy}-${mm}-${dd}은 ${weekName}요일 입니다.`);
+
   return weekName;
 };
 const makeLenString1 = (s, len = 2) => {
@@ -47,7 +49,7 @@ const makeLenString2 = (s, len = 2) => {
 };
 
 /**
- * Part 2. 
+ * Part 2. switch문을 사용하지 않고, 오늘에 해당하는 요일을 출력하시오.
  */
 const WEEK_NAMES = '일월화수목금토';
 // const WEEK_NAMES = ['일', '월', '화', '수', '목', '금', '토'];

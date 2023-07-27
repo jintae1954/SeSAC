@@ -1,3 +1,6 @@
+/**
+ * Part 1. 깊은 복사를 하는 deepCopy를 완성하시오.
+ */
 class Dog {
   constructor(name) {
     this.name = name;
