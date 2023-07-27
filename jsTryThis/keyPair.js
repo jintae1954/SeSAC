@@ -17,7 +17,7 @@ const keyPair2 = (arr, N) => {
   let i, j;
   for(let elem of arr) {
     // console.log(elem, table[elem]);
-    if(!checker[arr.indexOf(elem)] && arr.includes(table[elem])) {
+    if(!checker[arr.indexOf(elem)] && arr.indexOf(table[elem]) !== -1) {
       checker[arr.indexOf(elem)] = 1;
       i = arr.indexOf(elem);
       j = arr.indexOf(table[elem]);
