@@ -8,11 +8,11 @@ const decompose = (N) => {
   for(let i = 1; i <= N/2; i++) {
     obj[i] = N - i;
   }
-  
+
   return obj;
 };
 
-const keyPair2 = (arr, N) => {
+const keyPair = (arr, N) => {
   const table = decompose(N);
   const checker = new Array(arr.length).fill(0);
   let i, j;
@@ -25,41 +25,15 @@ const keyPair2 = (arr, N) => {
     }
   }
 
-  return [i, j];
+  return [i = -1, j = -1];
 };
 
-const a2 = keyPair2([1, 4, 45, 6, 10, 8], 16); // [3, 4]
-console.log("🚀 ~ a2:", a2);
 
-const b2 = keyPair2([1, 2, 4, 3, 6], 10); // [2, 4]
-console.log("🚀 ~ b2:", b2);
+const a = keyPair([1, 4, 45, 6, 10, 8], 16); // [3, 4]
+console.log("🚀 ~ a:", a);
 
-const c2 = keyPair2([1, 2, 3, 4, 5], 9); // [3, 4]
-console.log("🚀 ~ c2:", c2);
+const b = keyPair([1, 2, 4, 3, 6], 10); // [2, 4]
+console.log("🚀 ~ b:", b);
 
-const d2 = keyPair2([1, 4, 45, 9, 8, 8], 16) // [4, 5]
-console.log("🚀 ~ c2:", c2);
-
-const e2 = keyPair2([1, 2, 4, 4, 9], 8) // [2, 3]
-console.log("🚀 ~ e2:", e2);
-
-const keyPair = (arr, N) => {
-  for(let i = 0; i < arr.length; i++) {
-    for(let j = i; j < arr.length; j++) {
-      if(N === arr[i] + arr[j]) {
-        return [i, j];
-      }
-    }
-  }
-  
-  return undefined;
-};
-
-// const a = keyPair([1, 4, 45, 6, 10, 8], 16); // [3, 4]
-// console.log("🚀 ~ a:", a);
-
-// const b = keyPair([1, 2, 4, 3, 6], 10); // [2, 4]
-// console.log("🚀 ~ b:", b);
-
-// const c = keyPair([1, 2, 3, 4, 5], 9); // [3, 4]
-// console.log("🚀 ~ c:", c);
+const c = keyPair([1, 2, 3, 4, 5], 9); // [3, 4]
+console.log("🚀 ~ c:", c);

@@ -9,7 +9,6 @@ const rangeSum = (here = 0, there = arr.length) => {
   if(here > there) {
     [there, here] = [here, there];
   }
-
   const temp = arr.slice(here, there+1);
   const sum = temp.reduce((acc, cur) => acc + cur);
   console.log("🚀 ~ rangeSum ~ sum:", sum);

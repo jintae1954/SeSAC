@@ -1,5 +1,5 @@
 /**
- * Part 1. class와 Array를 사용하여 Stack과 Queue를 구현하시오.
+ * Part 1. class와 Array를 사용하여 Stack을 구현하시오.
  */
 class Stack {
   #array;
@@ -26,6 +26,9 @@ stack.print();
 console.log(stack.pop()); // LIFO
 stack.print();
 
+/**
+ * Part 2. class와 Array를 사용하여 Queue를 구현하시오.
+ */
 class Queue {
   #array;
   constructor(array = []) {
