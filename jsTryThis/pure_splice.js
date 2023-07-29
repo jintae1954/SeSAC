@@ -25,3 +25,5 @@ console.log("🚀 ~ a4:", a4);
 
 const a5 = splice(a4, 2, 2, 7, 8, 9); // a5 = [1, 3, 7, 8, 9]
 console.log("🚀 ~ a5:", a5);
+
+console.log("🚀 ~ arr:", arr);

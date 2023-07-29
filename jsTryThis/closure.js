@@ -1,6 +1,7 @@
 /**
  * Part 1. closure를 활용하여 bill함수를 완성하시오.
  */
+
 const MENU = {
   짜장: { price: 7000 },
   짬뽕: { price: 9900 },
@@ -8,10 +9,10 @@ const MENU = {
 };
 
 // 보조 함수
-const printFormat = (len = 21) => {
+const printFormat = (len = 20) => {
   console.log("=".repeat(len));
 };
-const makeRightString = (s, len = 9) => {
+const makeRightString = (s, len = 8) => {
   const t = ' '.repeat(len) + s.toLocaleString() + '원';
   return t.substring(t.length - len);
 };
@@ -36,10 +37,10 @@ function bill() {
     printBill() {
       let prices = 0, taxes = 0;
       printFormat();
-      for (const order of orders) {
-        let price = MENU[order].price;
-        let tax = MENU[order].taxFree === 1 ? 0 : Math.round( (MENU[order].price/1.1) * 0.1);
-        printOrderAndPriceAndTax(order, price, tax)
+      for (const ordered of orders) {
+        let price = MENU[ordered].price;
+        let tax = MENU[ordered].taxFree === 1 ? 0 : Math.round( (MENU[ordered].price / 1.1) * 0.1);
+        printOrderAndPriceAndTax(ordered, price, tax)
         console.log(" - ".repeat(7));
         prices += price;
         taxes += tax;

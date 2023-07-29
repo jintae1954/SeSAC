@@ -48,12 +48,12 @@ console.log("🚀 ~ b:", b);
 Object.defineProperties(Array.prototype, {
   firstObject: {
     get: function() {
-        return this.shift();
+        return this[0];
     },
   },
   lastObject: {
     get: function() {
-        return this.pop();
+        return this[this.length - 1];
     },
   },
 });

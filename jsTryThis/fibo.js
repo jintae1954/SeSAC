@@ -42,7 +42,7 @@ const memoizedFibonacci = memoized(
     if(n < 2) return n;
     return memoizedFibonacci(n-2) + memoizedFibonacci(n-1);
   }
-)
+);
 
 for(let i = 0; i < 10; i++) {
   runCnt = 0;

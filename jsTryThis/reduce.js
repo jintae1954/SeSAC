@@ -1,3 +1,6 @@
+/**
+ * Part 1. reduce 함수를 구현하시오.
+ */
 const reduce = (arr, fn, initValue) => {
   let i = 0;
   let acc = initValue ?? (i += 1, arr[0]);

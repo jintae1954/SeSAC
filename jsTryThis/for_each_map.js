@@ -30,7 +30,6 @@ const powSqrtByForEach = (arr) => {
 };
 
 const powSqrtByMap = (arr) => {
-
   const p = arr.map(elem => elem**2);
   const q = arr.map(elem => Math.sqrt(elem));
 
