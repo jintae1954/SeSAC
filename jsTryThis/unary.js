@@ -7,11 +7,11 @@
 const arr = ['1', '2', '3'];
 
 const r1 = arr.map(parseInt);
-console.log("🚀 ~ r1:", r1);
+console.log('🚀 ~ r1:', r1);
 
-const unary = (fn) => {
-  return fn.length === 1 ? fn : (arg) => fn(arg);
+const unary = fn => {
+  return fn.length === 1 ? fn : arg => fn(arg);
 };
 
 const r2 = arr.map(unary(parseInt));
-console.log("🚀 ~ r2:", r2);
+console.log('🚀 ~ r2:', r2);

@@ -5,11 +5,11 @@
 
 const arr = [1, 4, 9];
 
-const powSqrtByForOf = (arr) => {
+const powSqrtByForOf = arr => {
   const p = [];
   const q = [];
 
-  for(const elem of arr) {
+  for (const elem of arr) {
     p.push(elem ** 2);
     q.push(Math.sqrt(elem));
   }
@@ -17,7 +17,7 @@ const powSqrtByForOf = (arr) => {
   return [p, q];
 };
 
-const powSqrtByForEach = (arr) => {
+const powSqrtByForEach = arr => {
   const p = [];
   const q = [];
 
@@ -29,8 +29,8 @@ const powSqrtByForEach = (arr) => {
   return [p, q];
 };
 
-const powSqrtByMap = (arr) => {
-  const p = arr.map(elem => elem**2);
+const powSqrtByMap = arr => {
+  const p = arr.map(elem => elem ** 2);
   const q = arr.map(elem => Math.sqrt(elem));
 
   return [p, q];

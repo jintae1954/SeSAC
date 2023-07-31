@@ -6,13 +6,13 @@
 const arr = [1, 3, 4, 2, 5, 8, 6, 7, 9];
 
 const rangeSum = (here = 0, there = arr.length) => {
-  if(here > there) {
+  if (here > there) {
     [there, here] = [here, there];
   }
-  const temp = arr.slice(here, there+1);
+  const temp = arr.slice(here, there + 1);
   const sum = temp.reduce((acc, cur) => acc + cur);
-  console.log("🚀 ~ rangeSum ~ sum:", sum);
-  
+  console.log('🚀 ~ rangeSum ~ sum:', sum);
+
   return sum;
 };
 

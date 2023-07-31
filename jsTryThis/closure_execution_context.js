@@ -1,6 +1,6 @@
 function discount() {
   const dcRate = 0.1;
-  
+
   return function (price) {
     return price * dcRate;
   };
@@ -12,7 +12,7 @@ const items = [
 ];
 
 const dc = discount();
-for( const { item, price: orgPrice } of items) {
+for (const { item, price: orgPrice } of items) {
   const salePrice = orgPrice - dc(orgPrice);
   console.log(`${item}: ${orgPrice} -> ${salePrice.toLocaleString()}원`);
 }

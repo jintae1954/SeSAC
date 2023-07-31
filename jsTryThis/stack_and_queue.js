@@ -7,33 +7,24 @@
  *  - poll: 가장 나중 또는 먼저 들어간 요소 반환 후 삭제 (Stack.pop, Queue.dequeue)
  *  - remove: 가장 나중 또는 먼저 들어간 요소 삭제
  */
-class collection {
+class Collection {
   #array;
   getArray() {
     return this.#array;
   }
   clear() {
-    return new Array();
+    this.#array = [];
   }
   toArray() {
+
+  }
+  get isEmpty() {
     
   }
+  get arr() {
+    return this.#array;
+  }
   print() {
-
-  }
-  isEmpty: {
-
-  }
-  peek: {
-
-  }
-  poll: {
-
-  }
-  remove: {
-
-  }
-  length: {
 
   }
 }

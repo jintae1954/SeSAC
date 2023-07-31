@@ -10,8 +10,8 @@ function f1(x, y) {
   console.log('f1>', gg, bb, zz, f2, f2.length); // 11, 22, 800, f2(t,u,v), 3
   f2('first'); // f2(t,u,v) 실행
   {
-    const xx = 99; 
-    let lll = 0; 
+    const xx = 99;
+    let lll = 0;
     f2('nest-first'); // f2(t) 실행
     var zz = 88;
     function f2(t) {

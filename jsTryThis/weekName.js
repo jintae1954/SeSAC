@@ -2,7 +2,7 @@
  * Part 1. 오늘은 000요일입니다. (switch문을 사용하지 않고도 작성해 보시오.)
  */
 
-const getWeekName = (date) => {
+const getWeekName = date => {
   let weekName;
   switch (date.getDay()) {
     case 0:

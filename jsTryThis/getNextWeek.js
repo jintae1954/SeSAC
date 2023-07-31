@@ -15,6 +15,6 @@ const getNextWeek = (() => {
 
 let cnt = 0;
 const intl = setInterval(() => {
-  console.log("call", cnt, getNextWeek());
+  console.log('call', cnt, getNextWeek());
   if ((cnt += 1) === 8) clearInterval(intl);
 }, 1000);

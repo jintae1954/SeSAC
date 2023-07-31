@@ -35,8 +35,8 @@ function bill() {
       orders.push(thing);
     },
     printBill() {
-      let prices = 0, taxes = 0;
       printFormat();
+      let prices = 0, taxes = 0;
       for (const ordered of orders) {
         let price = MENU[ordered].price;
         let tax = MENU[ordered].taxFree === 1 ? 0 : Math.round( (MENU[ordered].price / 1.1) * 0.1);
