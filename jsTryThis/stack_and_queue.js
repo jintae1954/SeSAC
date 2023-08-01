@@ -22,6 +22,14 @@ class Collection {
   get arr() {
     return this.#arr;
   }
+  get remove() {
+    if (this.constructor.name === 'Stack') {
+      this.#arr.pop();
+    }
+    if (this.constructor.name === 'Queue') {
+      this.#arr.shift();
+    }
+  }
   get peek() {
     if (this.constructor.name === 'Stack')
       return this.#arr.slice(this.#arr.length - 1);
@@ -76,16 +84,15 @@ console.log(stack.peek, queue.peek); // 마지막 원소
 queue.print(); // 출력
 const arr = queue.toArray().map(a => console.log(a));
 
-console.log('stack.length', stack.length);
-console.log('queue.length', queue.length);
-console.log('stack.isEmpty', stack.isEmpty);
-console.log('queue.isEmpty', queue.isEmpty);
-
 if (!stack.isEmpty) {
+  stack.remove;
+  stack.print();
   stack.clear();
   stack.print();
 }
 if (queue.length) {
+  queue.remove;
+  queue.print();
   queue.clear();
   queue.print();
 }
