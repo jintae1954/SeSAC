@@ -37,14 +37,6 @@ console.log('🚀 ~ t:', t);
  *  - arr.firstObject // 1
  *  - arr.lastObject // 5
  */
-const arr = [1, 2, 3, 4, 5];
-
-const a = [...arr].shift();
-console.log('🚀 ~ a:', a);
-
-const b = [...arr].pop();
-console.log('🚀 ~ b:', b);
-
 Object.defineProperties(Array.prototype, {
   firstObject: {
     get: function () {
@@ -57,6 +49,14 @@ Object.defineProperties(Array.prototype, {
     },
   },
 });
+
+const arr = [1, 2, 3, 4, 5];
+
+const a = [...arr].shift();
+console.log('🚀 ~ a:', a);
+
+const b = [...arr].pop();
+console.log('🚀 ~ b:', b);
 
 console.log(arr.firstObject);
 console.log(arr.lastObject);
