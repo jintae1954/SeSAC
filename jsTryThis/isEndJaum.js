@@ -10,14 +10,19 @@ const isEndJaum = str => {
 
 const a = isEndJaum('강원도');
 console.log('🚀 ~ a:', a);
+
 const b = isEndJaum('바라당');
 console.log('🚀 ~ b:', b);
+
 const c = isEndJaum('ㅜㅜ');
 console.log('🚀 ~ c:', c);
+
 const d = isEndJaum('케잌');
 console.log('🚀 ~ d:', d);
+
 const e = isEndJaum('점수 A'); // '알파벳L'은 true
 console.log('🚀 ~ e:', e);
+
 const f = isEndJaum('24'); // '23'은 true
 console.log('🚀 ~ f:', f);
 
