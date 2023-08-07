@@ -10,7 +10,7 @@ const MENU = {
 
 // 보조 함수
 const printFormat = (len = 20) => {
-  console.log("=".repeat(len));
+  console.log('='.repeat(len));
 };
 const makeRightString = (s, len = 8) => {
   const t = ' '.repeat(len) + s.toLocaleString() + '원';
@@ -18,12 +18,12 @@ const makeRightString = (s, len = 8) => {
 };
 const printOrderAndPriceAndTax = (order, price, tax) => {
   console.log(order);
-  console.log("공급가액: ", makeRightString(price));
-  console.log("부가세액: ", makeRightString(tax));
+  console.log('공급가액: ', makeRightString(price));
+  console.log('부가세액: ', makeRightString(tax));
 };
 const printTotalPricesAndTaxes = (prices, taxes) => {
-  console.log("주문합계: ", makeRightString(prices));
-  console.log("세액합계: ", makeRightString(taxes));
+  console.log('주문합계: ', makeRightString(prices));
+  console.log('세액합계: ', makeRightString(taxes));
 };
 
 function bill() {
@@ -36,18 +36,22 @@ function bill() {
     },
     printBill() {
       printFormat();
-      let prices = 0, taxes = 0;
+      let prices = 0,
+        taxes = 0;
       for (const ordered of orders) {
         let price = MENU[ordered].price;
-        let tax = MENU[ordered].taxFree === 1 ? 0 : Math.round( (MENU[ordered].price / 1.1) * 0.1);
-        printOrderAndPriceAndTax(ordered, price, tax)
-        console.log(" - ".repeat(7));
+        let tax =
+          MENU[ordered].taxFree === 1
+            ? 0
+            : Math.round((MENU[ordered].price / 1.1) * 0.1);
+        printOrderAndPriceAndTax(ordered, price, tax);
+        console.log(' - '.repeat(7));
         prices += price;
         taxes += tax;
       }
       printTotalPricesAndTaxes(prices, taxes);
       printFormat();
-    }
+    },
   };
 }
 

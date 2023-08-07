@@ -15,7 +15,7 @@ const deleteArray = (arr, from, to = arr.length) => {
 // console.log(deleteArray(arr, 1, 3)); // [1, 4]
 
 /**
- * Part 2. deleteObject 함수를 순수함수로 구현하시오.
+ * Part 2. deleteObjectArray 함수를 순수함수로 구현하시오.
  */
 
 const users = [
@@ -24,7 +24,7 @@ const users = [
   { id: 3, name: 'Lee' },
 ];
 
-const deleteObject = (arr, key, value) => {
+const deleteObjectArray = (arr, key, value) => {
   let res = [];
   for (const [_k, _v] of Object.entries(arr)) {
     if (key.toString() === _k) continue;
@@ -34,6 +34,6 @@ const deleteObject = (arr, key, value) => {
   return res;
 };
 
-// console.log(deleteObject(users, 2)); // Hong, Kim
-// console.log(deleteObject(users, 'id', 2)); // Hong, Lee
-// console.log(deleteObject(users, 'name', 'Lee')); // Hong, Kim
+// console.log(deleteObjectArray(users, 2)); // Hong, Kim
+// console.log(deleteObjectArray(users, 'id', 2)); // Hong, Lee
+// console.log(deleteObjectArray(users, 'name', 'Lee')); // Hong, Kim
