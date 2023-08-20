@@ -5,7 +5,6 @@
 const isEndJaum = str => {
   // 0 1 3 6 7 8 9
   // L M N R
-  const reg = /[ㄱ-ㅎ0136789LMNR]/;
 };
 
 const a = isEndJaum('강원도');

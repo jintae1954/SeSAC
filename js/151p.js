@@ -58,8 +58,6 @@ class Collection {
   print() {
     console.log(this.constructor.name, this.#arr);
   }
-
-  [Symbol.iterator]() {}
 }
 
 class Stack extends Collection {
@@ -102,48 +100,55 @@ class Queue extends Collection {
   }
 }
 
-const stack = new Stack([2, 3]); // or new Stack([1,2]); // (1,2)
-stack.push(4); // 추가하기
-stack.print();
-console.log(stack.pop()); // LIFO
+// new Stack, push(), pop(), print()
+const stack = new Stack([2, 3]); // or new Stack(1,2)
+stack.push(4);
+console.log(stack.pop());
 stack.print();
 console.log('\n');
 
+// new Queue, push(), pop(), print()
 const queue = new Queue([1, 2]);
-queue.enqueue(3); // 추가하기
-queue.print();
-console.log(queue.dequeue()); // FIFO
+queue.enqueue(3);
+console.log(queue.dequeue());
 queue.print();
 console.log('\n');
 
+// peek
 const peekStack = stack.peek;
-console.log('🚀 ~ peekStack:', peekStack);
 const peekQueue = queue.peek;
+console.log('🚀 ~ peekStack:', peekStack);
 console.log('🚀 ~ peekQueue:', peekQueue);
 console.log('\n');
 
-const tmp = queue.toArray();
-console.log('🚀 ~ tmp:', tmp);
+// toArray()
 const arr = queue.toArray().map(a => (console.log(a), a));
 console.log('🚀 ~ arr:', arr);
 console.log('\n');
 
+// iterable
 stack.print();
 for (const a of stack) {
   console.log(a);
 }
-const iterStack = stack[Symbol.iterator]();
-console.log(iterStack.next());
-console.log(iterStack.next());
-console.log(iterStack.next());
-console.log('\n');
-
 queue.print();
 for (const a of queue) {
   console.log(a);
 }
 console.log('\n');
 
+// [Symbol.iterator]()
+const iterStack = stack[Symbol.iterator]();
+const iterQueue = queue[Symbol.iterator]();
+console.log('🚀 ~ iterStack:', iterStack.next());
+console.log('🚀 ~ iterStack:', iterStack.next());
+console.log('🚀 ~ iterStack:', iterStack.next());
+console.log('🚀 ~ iterQueue:', iterQueue.next());
+console.log('🚀 ~ iterQueue:', iterQueue.next());
+console.log('🚀 ~ iterQueue:', iterQueue.next());
+console.log('\n');
+
+// isEmpty
 if (!stack.isEmpty) {
   stack.remove();
   stack.print();
