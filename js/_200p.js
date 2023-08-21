@@ -34,3 +34,22 @@ console.log('🚀 ~ 이십삼:', 이십삼);
 /**
  * Part 2. 조사 '이/가', '을/를', '은/는'을 알아서 붙이는 함수를 작성하시오.
  */
+const iga = str => (isEndJaum(str) ? (str += '이') : (str += '가'));
+const eulul = str => (isEndJaum(str) ? (str += '을') : (str += '를'));
+const eunun = str => (isEndJaum(str) ? (str += '은') : (str += '는'));
+
+const 고성군이가 = iga('고성군');
+const 고성군을를 = eulul('고성군');
+const 고성군은는 = eunun('고성군');
+
+const 강원도이가 = iga('강원도');
+const 강원도을를 = eulul('강원도');
+const 강원도은는 = eunun('강원도');
+
+console.log('🚀 ~ 고성군이가:', 고성군이가);
+console.log('🚀 ~ 고성군을를:', 고성군을를);
+console.log('🚀 ~ 고성군은는:', 고성군은는);
+
+console.log('🚀 ~ 강원도이가:', 강원도이가);
+console.log('🚀 ~ 강원도을를:', 강원도을를);
+console.log('🚀 ~ 강원도은는:', 강원도은는);
