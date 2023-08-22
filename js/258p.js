@@ -1,3 +1,8 @@
+/**
+ * Part 1. 아래의 코드를 Promise로 리팩토링 하시오
+ */
+
+// console.log('START', new Date());
 // setTimeout(function () {
 //   console.log('depth1', new Date());
 //   setTimeout(function () {
@@ -10,7 +15,6 @@
 // }, 1000);
 
 console.log('START', new Date());
-
 const promiseFn = (depth = 1) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -18,5 +22,4 @@ const promiseFn = (depth = 1) =>
       depth < 3 ? resolve(depth + 1) : reject(new Error('Already 3-depth!!'));
     }, 1000 * depth);
   });
-
 promiseFn().then(promiseFn).then(promiseFn).catch();
