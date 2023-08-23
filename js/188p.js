@@ -14,7 +14,7 @@ for (let i = 0; i < 5; i++) {
 }
 arr.sort((a, b) => b - a);
 
-const d1 = Date.parse('1970/1/2 UTC');
+const d1 = Date.parse('1970/1/2 UTC') / 1000;
 const d2 = arr.map(a => new Date(a));
 const d3 = new Date().getDate();
 const d4 = new Date(Date.now() + ONE_DAT_MIL_SEC * after_days);
