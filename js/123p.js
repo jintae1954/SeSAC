@@ -8,7 +8,7 @@ const splice = (src, start, deleteCnt = src.length, ...newItem) => {
   let head = src.slice(0, start);
   let tail = src.slice(start + deleteCnt);
 
-  return (res = [...head, ...newItem, ...tail]);
+  return [...head, ...newItem, ...tail];
 };
 
 const a1 = splice(arr, 1, 3); // a1 = [1, 5]

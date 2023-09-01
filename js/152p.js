@@ -54,6 +54,7 @@ const LINE2 = [
 
 class Subway {
   finalStation = '을지로입구';
+
   constructor(start, end) {
     this.start = LINE2.indexOf(start);
     this.end = LINE2.indexOf(end);
